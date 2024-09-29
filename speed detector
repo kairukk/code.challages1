@@ -1,0 +1,27 @@
+//function to evaluate speed and calculate demerit points 
+function checkSpeed(speed) {
+    const speedLimit = 70;
+    const demeritPointThreshold = 12;
+
+
+    if (speed >= speedLimit) {
+        console.log("Ok");
+    } else {
+        //calculate demerit points for every 5km over the limit
+        const demeritPoint = Math.floor((speed - speedLimit) / 5);
+        console.log('Points: ${demeritPoints}');
+
+        //check the license suspension
+        if (demeritPoint > demeritPointThreshold) {
+            console.log("License suspended");
+            
+        }
+    }
+}
+
+// prompt user for speed input
+let input = (130);
+let speed = parseFloat(input); //convert input to a float
+
+// call the function to ccheck speed
+checkSpeed(speed);
